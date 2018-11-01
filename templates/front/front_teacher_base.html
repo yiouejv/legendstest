@@ -1,0 +1,61 @@
+{% extends "common/common_base.html" %}
+{% from "common/_macro.html" import static %}
+
+{% block title %}
+    在线考试系统教师管理
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static("front/css/front_teacher_base.css") }}">
+    <link rel="stylesheet" href="{{ static("front/css/front_teacher_main.css") }}">
+    <link rel="stylesheet" href={{ static('admin/css/admin_login_min.css') }}>
+    <link rel="stylesheet" href="{{ static("common/css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ static("common/css/sweetalert.css") }}">
+{#    <script src="{{ static("common/js/bootstrap.min.js") }}"></script>#}
+{#    <script src="{{ static("common/js/xtalert.js") }}"></script>#}
+{#    <script src="{{ static("common/js/sweetalert.min.js") }}"></script>#}
+    <link rel="stylesheet" href="{{ static("admin/css/sweetalert.css") }}">
+    <script src="{{ static("admin/js/xtalert.js") }}"></script>
+    <script src="{{ static("admin/js/sweetalert.min.js") }}"></script>
+    <script src="{{ static("common/js/jquery.min.js") }}"></script>
+    <script src="{{ static("common/js/bootstrap.min.js") }}"></script>
+
+    {% block addStyle %}
+    {% endblock %}
+{% endblock %}
+
+{% block topTitle %}
+    {% block welcome %}
+{#        这里填写'xxx老师，欢迎您'#}
+    {% endblock %}
+{% endblock %}
+
+{% block body %}
+
+    <!--整体-->
+   <div id="main" class="">
+		<!--中部-->
+		<div id="menu" class="">
+			<!--中左部-->
+			<div id="menu-left" class="">
+				<ul type="none">
+		 			<li style="background-color: #ECECEC;font-size: 18pt; color: #3d9970;height: 18px;padding-top:10px ;margin-bottom: 40px;">教师操作</li>
+                    <a href="{{ url_for("front.teacher_info") }}"><li>教师信息</li></a>
+                    <a href="{{ url_for("front.manager_choice", page=1) }}"><li>选择题管理</li></a>
+                    <a href="{{ url_for("front.manager_short_answer", page=1) }}"><li>简答题管理</li></a>
+                    <a href="{{ url_for("front.manager_program", page=1) }}"><li>编程题管理</li></a>
+                    <a href="{{ url_for("front.manager_test_pager", page=1) }}"><li>试卷 管理</li></a>
+                    <a href="{{ url_for("front.manager_score", page=1) }}"><li>成绩 管理</li></a>
+                    <a href="{{ url_for("front.teacher_exam_list", page=1) }}"><li>阅卷</li></a>
+                </ul>
+			</div>
+            {% block mainContent %}
+
+            {% endblock %}
+		</div>
+   </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

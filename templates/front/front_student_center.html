@@ -1,0 +1,64 @@
+{% extends "front/front_base.html" %}
+
+{% block title %}
+    <title>学生中心</title>
+{% endblock %}
+
+{% set user = g.student_user %}
+
+{% block mainContent %}
+    <div id="main_menu">
+        <div class="col-180 pull-left">
+            <div class="userinfo-x text-center">
+                <p class="user-imgbox-x">
+                    <img src="{{ static("front/images/tx.jpg") }}" width="80" height="80">
+                </p>
+                <p class="user-name-x">{{ user.student_name }}</p>
+            </div>
+
+            <ul class="leftmenu-x ">
+                <li><a href="#"><span>投诉建议</span></a></li>
+                <li><a href="{{ url_for("front.studentCenter") }}"><span>我的考试</span></a></li>
+            </ul>
+        </div>
+        <div class="col-1000">
+            <div class="userinfo-lty">
+                <div class="userinfo-title">
+                    <span>基本信息</span>
+                </div>
+                <div class="userinfo-content">
+                    <ul class="basic-info">
+                        <li>
+                            <span>头像</span>
+                            <div class="update-input update-tx">
+                                <a href="#">
+                                    <div style="width:50px;height:50px;border-radius:50%;overflow:hidden;">
+                                        <img width="50" height="50"  src="{{ static("front/images/tx.jpg") }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+
+                            <span>用户姓名</span>
+                            <div class="update-input">
+                                <input type="text" disabled placeholder="测试账号" value="{{ user.student_name }}">
+                            </div>
+                        </li>
+                        <li>
+                            <span>手机号</span>
+                            <div class="update-input">
+                                <input type="text" disabled placeholder="18701000121" value="{{ user.student_phone }}">
+                            </div>
+                        </li>
+                        <li>
+                            <span>邮箱</span>
+                            <div class="update-input">
+                                <input type="text" disabled placeholder="444918563@qq.com" value="{{ user.student_email }}">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+{% endblock %}

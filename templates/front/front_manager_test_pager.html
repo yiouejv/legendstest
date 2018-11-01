@@ -1,0 +1,109 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block addStyle %}
+    <script src="{{ static("front/js/post_test_pager.js") }}"></script>
+{% endblock %}
+
+{% block mainContent %}
+<div id="main" class="" style="float: right; width: 990px;">
+    <div id="right-top" class="">
+        <h1 class="gl">试卷管理</h1>
+        <div class="tianjia">
+            <a href="{{ url_for("front.add_test_page") }}">生成试卷</a>
+        </div>
+    </div>
+    <div id="right-bottom" class="">
+        <div id="r-b-center" class="">
+            <table cellpadding="0" cellspacing="0" width="990px">
+                <tr>
+                    <th id="bianhao">编号</th>
+                    <th id="timu" style="width: 90px;">所属语言</th>
+                    <th id="daan">试卷名称</th>
+                    <th style="width: 120px;">试卷总分</th>
+                    <th id="daan">考试时间</th>
+                    <th id="daan">状态</th>
+                    <th id="bianji">编辑</th>
+                </tr>
+                {% for test_pager in test_pagers %}
+                    <tr data-id="{{ test_pager.test_pager_id }}">
+                        <td id="bianhao">{{ test_pager.test_pager_id }}</td>
+                        <td id="type" style="width: 40px;">{{ test_pager.test_pager_type }}</td>
+                        <td id="timu">{{ test_pager.test_pager_name }}</td>
+                        <td id="daan" style="width: 60px;">{{ test_pager.test_pager_total_score }}</td>
+{#                    如果设置了考试时间，则显示考试时间，否则显示为暂未设置#}
+                        {% if test_pager.test_pager_test_time %}
+                            <td id="daan">{{ test_pager.test_pager_test_time }}</td>
+                        {% else %}
+                            <td style="color: red">暂未设置</td>
+                        {% endif %}
+{#                        如果发布了试卷，显示已发布（蓝色），否则显示未发布（红色）#}
+                        {% if test_pager.test_pager_publish %}
+                            <td style="color: blue">已发布</td>
+                        {% else %}
+                            <td style="color: red">未发布</td>
+                            <td id="bianji"><button id="{{ test_pager.test_pager_id }}" class="postTestPager" data-toggle="modal" data-target="#postTestPager">发布</button></td>
+                        {% endif %}
+                        <td></td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+            {% block nextPage %}
+                <center>
+                    {% if page > 1 %}
+                        {% with page=page - 1 %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_test_pager', page=page) }}">上一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                    <span class="space-width"> </span>
+                    {% if total >= TEST_PAGER_SIZE %}
+                        {% with page=page + 1  %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_test_pager', page=page) }}">下一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                </center>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="postTestPagerDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">试卷发布</h4>
+      </div>
+      <div class="modal-body" style="margin: 0 auto; font-size: 20px; width: 580px;">
+        <form class="form-horizontal" method="post">
+            <div style="visibility:hidden"><input name="id" type="text" value=""></div>
+          <div class="form-group">
+            <label name="testTime" for="inputTestTime" class="col-sm-3 control-label">考试时间</label>
+            <div class="col-sm-8">
+              <input name="name" type="text" class="form-control" id="inputTestTime" placeholder="时间格式：2018-10-10 0:0:0">
+            </div>
+          </div>
+          <div class="form-group">
+              <label name="" for="inputName" class="col-sm-3 control-label">参加班级</label>
+            <div class="col-sm-8">
+              <select name="testClass" id="testClass">
+                  {% for class in classes %}
+                    <option value="{{ class }}" name="{{ class }}">{{ class }}</option>
+                  {% endfor %}
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button id="save-info-btn" type="button" class="btn btn-primary save-btn">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

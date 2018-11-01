@@ -1,0 +1,110 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block mainContent %}
+    {% if message %}
+        <script>
+            xtalert.alertError("{{ message }}");
+        </script>
+    {% endif %}
+<div id="main" class="" style="float: right; width: 990px; padding-left: 30px">
+    <div id="right" class="">
+		<form action="" method="post">
+		<div id="right-top" class="">
+			<h1>试卷管理</h1>
+		</div>
+		<div id="right-bottom" class="">
+			<table id="r-b-center">
+				<tr class="hang">
+					<th colspan="3" style="text-align: center">(最新一期)考卷设置</th>
+				</tr>
+				<tr class="hang">
+                	<th style="text-align:center;">题型</th>
+                    <th style="text-align:center;">本张试卷中包含该类题的个数</th>
+                    <th style="text-align:center;">每道题的分值</th>
+                </tr>
+				<tr  class="hang">
+                	<td>选择题</td>
+                    <td>
+                        <select name="choiceSize">
+                            {% for foo in range(1,50) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="choiceScore">
+                            {% for foo in range(1,10) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr  class="hang">
+                	<td>简答题</td>
+                    <td>
+                        <select name="shortAnswerSize">
+                            {% for foo in range(1,10) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="shortAnswerScore">
+                            {% for foo in range(1,20) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr  class="hang">
+                	<td>程序题</td>
+                     <td>
+                        <select name="programSize">
+                            {% for foo in range(1,10) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="programScore">
+                            {% for foo in range(1,50) %}
+                                <option value="{{ loop.index }}">{{ loop.index }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr  class="hang">
+                	<td>生成试卷的类型</td>
+                    <td>
+                        <select name="type" style="width: 80px">
+                            <option value="python" name="python">python</option>
+                            <option value="java" name="java">java</option>
+                        </select>
+                    </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="hang">
+                    <td>试卷名称</td>
+                    <td>
+                        <input type="text" name="name" placeholder="本张试卷的名称">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr  class="hang">
+                	<td colspan="3">
+                    	<center>
+                    	<button type="submit" class="btn btn-success">生成试卷</button>
+                        </center>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+    <script>
+        xtalert.alertSuccess('试卷添加成功，试卷总分: '+{{ totalScore }})
+    </script>
+{% endblock %}
+

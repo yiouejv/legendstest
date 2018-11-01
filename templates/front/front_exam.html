@@ -1,0 +1,44 @@
+{% extends "front/front_base.html" %}
+
+{% block title %}
+    <title>在线考试</title>
+{% endblock %}
+
+{% block mainContent %}
+    <div id="main_menu">
+            <div id="top">
+                <h2>考试列表</h2>
+            </div>
+            <div id="menu">
+                <table width="100%" align="center" style="border-bottom: 1px solid #ccc" >
+                    <tr>
+                        <th>序号</th>
+                        <th>考试名称</th>
+                        <th>考试时间</th>
+                        <th>状态</th>
+                        <th>总分</th>
+                        <th>得分</th>
+                        <th>操作</th>
+                    </tr>
+                    {% for score in Scores %}
+                        <tr>
+                            <th style="padding-left: 20px">{{ score.score_id }}</th>
+                            <th>{{ score.socre_test_pager.test_pager_name }}</th>
+                            <th>{{ score.socre_test_pager.test_pager_test_time }}</th>
+                            <th>{{ score.score_state }}</th>
+                            <th>{{ score.socre_test_pager.test_pager_total_score }}</th>
+                            <th>{{ score.score_student_socre }}</th>
+                            {% if score.score_state == '未参加考试' %}
+                                <th><a href="{{ url_for('front.student_exam_pager', test_pager_id=score.socre_test_pager.test_pager_id) }}">开始考试</a></th>
+                            {% elif score.score_state == '等待阅卷' %}
+                                <th style="color: red">等待阅卷</th>
+                            {% elif score.score_state == '已经批阅' %}
+                                <th><a href="{{ url_for("front.front_student_view_exam_pager", test_pager_id=score.socre_test_pager.test_pager_id) }}">查看试卷</a></th>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+    </div>
+{% endblock %}

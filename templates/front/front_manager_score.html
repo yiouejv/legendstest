@@ -1,0 +1,51 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block addStyle %}
+    <script src="{{ static("front/js/update_score.js") }}"></script>
+{% endblock %}
+
+{% block mainContent %}
+<div id="main" class="" style="float: right;width: 990px">
+    <div id="right-top" class="">
+        <h1 class="gl">成绩管理</h1>
+    </div>
+    <div id="right-bottom" class="">
+        <div id="r-b-center" class="">
+            <table cellpadding="0" cellspacing="0" width="990px">
+                <tr>
+                    <th id="bianhao">班级</th>
+                    <th id="timu" style="width: 120px;">学生</th>
+                    <td id="tigan">考试名称</td>
+                    <th id="daan" style="width: 150px;">试卷状态</th>
+                    <th id="bianji">考生得分</th>
+                </tr>
+                {% for score in scores %}
+                    <tr>
+                        <td id="bianhao">{{ score.socre_student.student_class.class_name }}</td>
+                        <td id="type" style="width: 40px;">{{ score.socre_student.student_name }}</td>
+                        <td id="timu">{{ score.socre_test_pager.test_pager_name }}</td>
+                        <td id="daan" style="width: 30px;">{{ score.score_state }}</td>
+                        <td id="bianji">{{ score.score_student_socre }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% block nextPage %}
+                <center>
+                    {% if page > 1 %}
+                        {% with page=page - 1 %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_score', page=page) }}">上一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                    <span class="space-width"> </span>
+                    {% if total >= SCORE_PAGER_SIZE %}
+                        {% with page=page + 1  %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_score', page=page) }}">下一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                </center>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,92 @@
+{% extends "common/common_base.html" %}
+
+{% block title %}
+    后台管理界面
+{% endblock %}
+    
+{% block head %}
+    <link rel="stylesheet" href={{ static('admin/css/admin_login_min.css') }}>
+    <link rel="stylesheet" href={{ static('admin/css/style.css') }}>
+    <style>
+        .main-title{
+            font-size: 25px;
+            padding-top: 10px;
+            padding-left: 5px;
+            line-height: 80px;
+        }
+        .main-content{
+            font-size: 30px;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+    {% block addStyle %}
+
+    {% endblock %}
+{% endblock %}
+
+{% block topTitle %}
+    <h2 class="top-title">
+        {{ g.admin_user.admin_name }}
+        {% if g.admin_user.admin_is_super %}
+            [超级管理员]
+        {% else %}
+            [管理员]
+        {% endif %}
+        <a href={{ url_for('admin.logout') }}><span style="color: #2b542c">注销</span></a>
+    </h2>
+{% endblock %}
+
+{% block body %}
+    <div id="main">
+    </div>
+    <div id="menu">
+        <div id="menu_left">
+            <div id="menu_left_1">
+                <h2 style="text-align: center;color: #3d9970;font-size: 18pt">管理员操作</h2>
+            </div>
+{#            左边菜单栏#}
+                <ul type="none">
+                    <a href={{ url_for('admin.admin_profile') }}><li>个人信息</li></a>
+                    <a href={{ url_for('admin.admin_reset_password') }}><li>修改密码</li></a>
+                    <a href={{ url_for('admin.admin_reset_email') }}><li>修改邮箱</li></a>
+                    {% if not g.admin_user.admin_is_super %}
+                        <a href={{ url_for('admin.admin_manager_teacher', page=1) }}><li>用户管理</li></a>
+                    {% else %}
+                        <a href={{ url_for('admin.admin_manager_user', page=1) }}><li>用户管理</li></a>
+                    {% endif %}
+                    <a href={{ url_for('admin.admin_search_user') }}><li>查找用户</li></a>
+
+                    {% if not g.admin_user.admin_is_super %}
+                        <a href={{ url_for('admin.admin_add_teacher', page=1) }}><li>用户管理</li></a>
+                    {% else %}
+                        <a href={{ url_for('admin.admin_add_user', page=1) }}><li>添加用户</li></a>
+                    {% endif %}
+                </ul>
+{#            左边菜单栏#}
+        </div>
+        <div id="menu_right">
+{#            右边内容板块#}
+            <div id="menu_right_1">
+                <a href={{ url_for('admin.index') }} target="_parent"><img src={{ url_for('static', filename='admin/images/page.png') }}> </a>
+                <span class="main-title">
+                    {% block mainTitle %}
+
+                    {% endblock %}
+                </span>
+                </div>
+                <div id="menu_right_2">
+                    <div class="main-content">
+                        {% block mainContent %}
+                            <p>base message</p>
+                        {% endblock %}
+                    </div>
+                </div>
+{#            右边内容板块#}
+            </div>
+        </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

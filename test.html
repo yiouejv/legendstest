@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/common/js/jquery.min.js.js"></script>
+    <script>
+        $(function () {
+            var btn = $("#btn");
+            btn.click(function () {
+                var input = $("input[name=\'"+"gender"+"\']:checked");
+                console.log(input.val());
+            });
+        });
+    </script>
+</head>
+<body>
+男<input type="radio" name="gender" value="男">
+女<input type="radio" name="gender" value="女">
+<button id="btn" value="submit">提交</button>
+</body>
+</html>

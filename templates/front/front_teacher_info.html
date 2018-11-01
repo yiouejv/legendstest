@@ -1,0 +1,43 @@
+{% extends "front/front_teacher_base.html" %}
+
+{% block welcome %}
+    {{ g.teacher_user.teacher_name }}老师，欢迎您
+    <a href="{{ url_for("front.teacher_logout") }}">[注销]</a>
+{% endblock %}
+
+{% block mainContent %}
+    {% set user = g.teacher_user %}
+        <div style="float:right; margin-right: 80px;margin-top:20px;">
+            <table class="table table-bordered" style="font-size: 18px; width: 850px;">
+                <tbody>
+                    <tr>
+                        <td>姓名：</td>
+                        <td>{{ user.teacher_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>邮箱：</td>
+                        <td>{{ user.teacher_email }}</td>
+                    </tr>
+                    <tr>
+                        <td>手机号：</td>
+                        <td>{{ user.teacher_phone }}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>管理班级</td>
+                        <td>{{ user.teacher_class }}</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>加入时间：</td>
+                        <td>{{ user.teacher_create_time }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+{% endblock %}
+
+{% block nextPage %}
+
+{% endblock %}
+

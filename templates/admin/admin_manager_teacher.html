@@ -1,0 +1,103 @@
+{% extends "admin/admin_manager_user.html" %}
+
+{% block modelJs %}
+    <script src="{{ static('admin/js/update_teacher.js') }}"></script>
+{% endblock %}
+
+{% block mainInfo %}
+        <div class="form-container">
+        <table class="table table-bordered" style="font-size: 18px">
+            <tbody>
+                <tr>
+                    <td><b>姓名</b></td>
+                    <td><b>邮箱账号</b></td>
+                    <td><b>绑定手机</b></td>
+                    <td><b>所属班级</b></td>
+                    <td><b>加入时间</b></td>
+                    <td><b>修改</b></td>
+                    <td><b>删除</b></td>
+                </tr>
+                {% for teacher in teachers %}
+                    {% if not teacher.teacher_is_delete %}
+                        <tr data-id="{{ teacher.teacher_id }}" data-name="{{ teacher.teacher_name }}" data-email="{{ teacher.teacher_email }}"
+                                data-phone="{{ teacher.teacher_phone }}" data-class="{{ teacher.teacher_class }}">
+                            <td>{{ teacher.teacher_name }}</td>
+                            <td>{{ teacher.teacher_email }}</td>
+                            <td>{{ teacher.teacher_phone }}</td>
+                            <td>
+                                {% set classes = teacher.teacher_class %}
+                                    {% for class in teacher.teacher_class %}
+                                        {{ class }}
+                                    {% endfor %}
+                            </td>
+                            <td>{{ teacher.teacher_create_time }}</td>
+                            <td> <button id="update-dialog" class="btn btn-primary btn-update" data-toggle="modal" data-target="#updatedialog">修改</button>
+                            <td> <button id="btn-delete" class="btn btn-danger btn-delete">删除</button> </td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+
+            </tbody>
+        </table>
+        </div>
+<!-- Modal -->
+<div class="modal fade" id="updatedialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改用户信息</h4>
+      </div>
+      <div class="modal-body" style="margin: 0 auto; font-size: 20px; width: 580px;">
+        <form class="form-horizontal" method="post">
+            <div style="visibility:hidden"><input name="id" type="text" value=""></div>
+          <div class="form-group">
+            <label name="name" for="inputName" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+              <input name="name" type="text" class="form-control" id="inputName" placeholder="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label name="email" for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+              <input name="email" type="email" class="form-control" id="inputEmail" placeholder="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label name="phone" for="inputPhone" class="col-sm-2 control-label">手机号</label>
+            <div class="col-sm-10">
+              <input name="phone" type="text" class="form-control" id="inputPhone" placeholder="phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label name="phone" for="inputPhone" class="col-sm-2 control-label">管理班级</label>
+            <div class="col-sm-10">
+              <input name="class_" type="text" class="form-control" id="inputClass" placeholder="class">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button id="save-info-btn" type="button" class="btn btn-primary save-btn">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block nextPage %}
+    <center>
+            {% if page > 1 %}
+                {% with page=page - 1 %}
+                    <td> <button type="button" class="btn btn-info"><a href="{{ url_for('admin.admin_manager_teacher', page=page) }}">上一页</a></button>
+                {% endwith %}
+            {% endif %}
+            <span class="space-width"> </span>
+            {% if total >= 10 %}
+                {% with page=page + 1  %}
+                    <td> <button type="button" class="btn btn-info"><a href="{{ url_for('admin.admin_manager_teacher', page=page) }}">下一页</a></button>
+                {% endwith %}
+            {% endif %}
+        </center>
+{% endblock %}

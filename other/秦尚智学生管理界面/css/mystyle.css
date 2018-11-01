@@ -1,0 +1,55 @@
+ul{
+    margin-right: 50px;
+}
+
+li{
+    text-align: center;
+    font-size:20px;
+    margin-top: 5px;
+    padding:15px;
+    background-color:rgba(255,252,153,0.1);
+
+}
+li:hover{
+    background-color: cornflowerblue;
+}
+
+ .active{
+     background: white;
+ }
+
+a{
+    text-decoration: none;
+}
+/*ul{position:absolute;left:50%;margin-left:-100px;}*/
+#show1{
+
+    height:780px;
+    width: auto;
+    border: 0px;
+    border-style: solid;
+    background: #f7f7f7;
+
+}
+#menu{
+    height: 600px;
+    background: #ececec;
+    width: 1100px;
+    margin-left:80px;
+
+}
+tr{
+    line-height: 50px;
+}
+th{
+    font-weight: lighter;
+    font-size: 14pt;
+}
+
+#top{
+    margin-left: 80px;
+    font-family: "微软雅黑";
+    font-size: 16pt;
+    color: #33a0b3;
+
+}

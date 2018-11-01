@@ -1,0 +1,98 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block addStyle %}
+    <script src="{{ static("front/js/update_program.js") }}"></script>
+{% endblock %}
+
+{% block mainContent %}
+<div id="main" class="" style="float: right; width: 990px;">
+    <div id="right-top" class="">
+        <h1 class="gl">程序设计题 题库管理</h1>
+        <div class="tianjia">
+            <a href="{{ url_for("front.add_program") }}">添加新题</a>
+        </div>
+    </div>
+    <div id="right-bottom" class="">
+        <div id="r-b-center" class="">
+            <table cellpadding="0" cellspacing="0" width="990px">
+                <tr>
+                    <th id="bianhao">编号</th>
+                    <th id="timu" style="width: 80px;">所属语言</th>
+                    <th id="tigan">题干</th>
+                    <th id="daan">答案</th>
+                    <th id="bianji">编辑</th>
+                </tr>
+                {% for program in programs %}
+                    <tr data-id="{{ program.program_id }}" data-content="{{ program.program_content }}"
+                        data-result="{{ program.program_result }}"
+                    >
+                        <td id="bianhao">{{ program.program_id }}</td>
+                        <td id="type" style="width: 40px;">{{ program.program_type }}</td>
+                        <td id="timu">{{ program.program_content[0:40] }}...</td>
+                        <td id="daan">{{ program.program_result[0:40] }}...</td>
+                        <td id="bianji">
+                            <button style="height: 35px;" class="btn btn-primary btn-lg updateBtn" data-toggle="modal" data-target="#myModal">
+                                修改/查看
+                            </button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% block nextPage %}
+                <center>
+                    {% if page > 1 %}
+                        {% with page=page - 1 %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_program', page=page) }}">上一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                    <span class="space-width"> </span>
+                    {% if total >= PROGRAM_SIZE %}
+                        {% with page=page + 1  %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_program', page=page) }}">下一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                </center>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					编辑题目
+				</h4>
+			</div>
+			<div class="modal-body" style="margin: 0 auto; font-size: 20px; width: 550px;">
+                <form class="form-horizontal" method="post">
+                    <div style="visibility:hidden"><input name="id" type="text" value=""></div>
+                  <div class="form-group">
+                    <label name="name" for="inputName" class="col-sm-2 control-label">题目</label>
+                    <div class="col-sm-10">
+                      <input name="content" type="text" class="form-control" id="inputContent" placeholder="题目">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="result" for="result" class="col-sm-2 control-label">答案</label>
+                    <div class="col-sm-10">
+                      <input name="result" type="text" class="form-control" id="result" placeholder="程序题答案">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="save-info-btn" type="button" class="btn btn-primary saveBtn">保存</button>
+            </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+{% endblock %}
+

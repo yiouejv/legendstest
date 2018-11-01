@@ -1,0 +1,39 @@
+{% extends "admin/admin_base.html" %}
+
+{% block mainTitle %}
+    个人信息
+{% endblock %}
+
+{% block mainContent %}
+    <div class="form-container">
+        {% set user = g.admin_user %}
+        <table class="table table-bordered" style="font-size: 18px">
+            <tbody>
+                <tr>
+                    <td>姓名：</td>
+                    <td>{{ user.admin_name }}</td>
+                </tr>
+                <tr>
+                    <td>邮箱：</td>
+                    <td>{{ user.admin_email }}</td>
+                </tr>
+                <tr>
+                    <td>手机号：</td>
+                    <td>{{ user.admin_phone }}</td>
+                </tr>
+                <tr>
+                    <td>权限：</td>
+                    {% if user.admin_is_super %}
+                        <td>管理后台管理员、老师、学生的信息</td>
+                    {% else %}
+                        <td>管理老师、学生的信息</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td>加入时间：</td>
+                    <td>{{ user.admin_create_time }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

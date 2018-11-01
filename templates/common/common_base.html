@@ -1,0 +1,24 @@
+{% from 'common/_macro.html' import static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ static('common/css/base.css') }}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="top">
+        <img src="{{ static('common/images/logo.png') }}" alt="这个一个logo" class="logo-div">
+        <h2 class="top-title">
+            {% block topTitle %}
+            {% endblock %}
+        </h2>
+    </div>
+    {% block body %}{% endblock %}
+    {% block footer %}
+        <div class="footer"></div>
+    {% endblock %}
+</body>
+</html>

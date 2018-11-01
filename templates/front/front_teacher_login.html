@@ -1,0 +1,42 @@
+{% from "common/_macro.html" import static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>老师登陆界面-传奇考试系统</title>
+    <link rel="stylesheet" href="{{ static("front/css/front_teacher_login.css") }}">
+</head>
+<body>
+	<div class="tea-bg">
+		<div class="main-2">
+			<div id="login-button-box">
+                <a href="{{ url_for("front.student_login") }}">
+                    <div id="stu-login-button">学生登录</div>
+                </a>
+                    <div id="tea-login-button">教师登录</div>
+	        </div>
+			<form class="form2" method="post" action="">
+		            <div class="div-input">
+		                <p>
+		                    <input class="tea-input" type="text" name="email" placeholder="请输入邮箱" id="tea-account-name">
+		                </p>
+		                <p>
+		                    <input class="tea-pwd-input" type="password" name="password" placeholder="输入密码" id="tea-pwd">
+		                </p>
+		            </div>
+		            <p style="width: 300px;margin-left: 28px">
+		                <input class="tea-checkbox-input" type="checkbox" name="remember" value="">15天自动登录
+                        <a href="#" style="float: right" class="forget-pwd">忘记密码？</a>
+		            </p>
+                    {% if error %}
+                        <span style="color: red; font-weight: bold; margin: 0 28px">
+                        {{ error }}
+                        </span>
+                    {% endif %}
+		            <button class="tea-button-big" id="login-button-2" style="">登录</button>
+		    </form>
+	    </div>
+    <div>
+</body>
+</html>

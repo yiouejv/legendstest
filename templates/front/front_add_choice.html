@@ -1,0 +1,59 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block mainContent %}
+    <div id="menu-right" class="">
+        <form method="post" action="">
+            <div id="right-top" class="">
+                <h1>选择题 题库管理</h1>
+                <h2>添加选择题</h2>
+            </div>
+            <div id="right-bottom">
+                <p id="" class="p2">
+                    题目：
+                    <textarea name="content" cols="88" rows="9"></textarea>
+                </p>
+                <p class="p2">
+                    语言：
+                    <select name="type">
+                        <option value="python" name="python">python</option>
+                        <option value="java" name="java">java</option>
+                    </select>
+                </p>
+                <p class="p2">选项：</p>
+                <p class="p1">
+                    A：<input type="text" name="option_A" class="text1" /><br /> B：
+                    <input type="text" name="option_B" class="text1" /><br /> C：
+                    <input type="text" name="option_C" class="text1" /><br /> D：
+                    <input type="text" name="option_D" class="text1" /><br />
+                </p>
+                <p class="p2">
+                    答案：
+                    <select name="result">
+                        <option value="A" name="A">A</option>
+                        <option value="B" name="B">B</option>
+                        <option value="C" name="C">C</option>
+                        <option value="D" name="D">D</option>
+                    </select>
+                    答案解析：<input type="text" name="parse" class="text1" /><br />
+                </p>
+                <div class="p1">
+                    <button type="submit" class="btn btn-info">保存</button>
+                    <button type="reset" class="btn btn-danger">重置</button>
+                </div>
+            </div>
+        </form>
+    {% if message != None %}
+
+        {% if message == 'success' %}
+            <script>
+                xtalert.alertSuccess('添加成功！')
+            </script>
+        {% else %}
+            <script>
+                xtalert.alertInfoToast("{{ message }}")
+            </script>
+        {% endif %}
+
+    {% endif %}
+    </div>
+{% endblock %}

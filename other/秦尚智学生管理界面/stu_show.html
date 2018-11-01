@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <table >
+        <ul type="none" >
+            <li> <a href="stu_text.html" target="rightWindow" >在线考试</a></li>
+            <li><a href="" target="rightWindow">查询成绩</a></li>
+            <li><a href="" target="rightWindow" >补 考</a></li>
+            <li><a href="" target="rightWindow">投诉建议</a></li>
+        </ul>
+        <script src="jquery-1.8.3.min.js"></script>
+        <script>
+            $(function(){
+                $('li').on("click",function(){
+                    $(this).addClass("active");
+                    $(this).siblings().removeClass('active');
+                })
+            })
+        </script>
+    </table>
+
+
+</body>
+</html>

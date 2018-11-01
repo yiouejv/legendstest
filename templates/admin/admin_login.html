@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考试系统后台登陆</title>
+    <link href="{{ url_for('static', filename='admin/css/admin_login_min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='admin/css/admin_login_signin.css') }}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+      <form class="form-signin", action="", method="post">
+        <h2 class="form-signin-heading">请登录</h2>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input name="email" type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+        <div class="checkbox">
+          <label>
+            <input name="remember" type="checkbox" value="1"> 记住我
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">立即登录</button>
+      </form>
+        {% if message %}
+            <p class="text-danger", style="text-align: center">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% from "common/_macro.html" import static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>学生登陆界面-传奇考试系统</title>
+    <link rel="stylesheet" href="{{ static("front/css/student_login.css") }}">
+</head>
+<body>
+	<div class="stu-bg">
+		<div class="main">
+			<div id="login-button-box">
+                <div id="account-login-button">学生登录</div>
+                <a href="{{ url_for("front.teacher_login") }}">
+                    <div id="tea-login-button">教师登录</div>
+                </a>
+	        </div>
+	        <div class="login-success">
+                <i class="icon-exclamation-sign"></i>
+	        </div>
+            <form action="" method="post">
+				<div class="div-input">
+					<p>
+						<input class="user-input" type="text" name="email" placeholder="请输入邮箱" id="account-name">
+					</p>
+					<p>
+						<input class="pwd-input" type="password" name="password" placeholder="输入密码" id="user-pwd">
+					</p>
+			    </div>
+			    <p style="width: 300px;margin-left: 28px">
+			    	<input class="checkbox-input" type="checkbox" name="remember" value="">15天自动登录
+			    	<a href="#" style="float: right" class="forget-pwd">忘记密码？</a>
+			    </p>
+                {% if error %}
+                    <span style="color: red; font-weight: bold; margin: 0 28px">
+                    {{ error }}
+                    </span>
+                {% endif %}
+			    <button class="button-big" id="login-button-1" style="" data-status="N">登录</button>
+			</form>
+		</div>
+	<div>
+</body>
+</html>

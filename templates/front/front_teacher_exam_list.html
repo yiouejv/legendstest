@@ -1,0 +1,51 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block mainContent %}
+<div id="main" class="" style="float: right;width: 990px">
+    <div id="right-top" class="">
+        <h1 class="gl">阅卷</h1>
+    </div>
+    <div id="right-bottom" class="">
+        <div id="r-b-center" class="">
+            <table cellpadding="0" cellspacing="0" width="990px">
+                <tr>
+                    <th id="bianhao">编号</th>
+                    <th id="daan" style="width: 50px;">班级</th>
+                    <th id="bianji">考试名称</th>
+                    <th id="bianji">考试时间</th>
+                    <th id="shancu">考生姓名</th>
+                    <th id="shancu">阅卷</th>
+                </tr>
+                {% for score in scores %}
+                    <tr>
+                        <td id="bianhao">{{ loop.index  }}</td>
+                        <td id="type" style="width: 40px;">{{ score.socre_student.student_class.class_name }}</td>
+                        <td id="type" style="width: 380px;">{{ score.socre_test_pager.test_pager_name }}</td>
+                        <td id="timu" style="width: 200px">{{ score.socre_test_pager.test_pager_test_time }}</td>
+                        <td id="daan" style="width: 30px;">{{ score.socre_student.student_name }}</td>
+                        <td id="shancu"><button id="" class="btn btn-danger">
+                        <a href="{{ url_for('front.teacher_exam_pager', student_id=score.socre_student.student_id,
+                        test_pager_id=score.socre_test_pager.test_pager_id) }}">阅卷</a></button></td>
+                    </tr>
+                {% endfor %}
+            </table>
+{#            {% block nextPage %}#}
+{#                <center>#}
+{#                    {% if page > 1 %}#}
+{#                        {% with page=page - 1 %}#}
+{#                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.teacher_exam_list', page=page) }}">上一页</a></button>#}
+{#                        {% endwith %}#}
+{#                    {% endif %}#}
+{#                    <span class="space-width"> </span>#}
+{#                    {% if total >= ChOICE_PAGE_SIZE %}#}
+{#                        {% with page=page + 1  %}#}
+{#                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.teacher_exam_list', page=page) }}">下一页</a></button>#}
+{#                        {% endwith %}#}
+{#                    {% endif %}#}
+{#                </center>#}
+{#            {% endblock %}#}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

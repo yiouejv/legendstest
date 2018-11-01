@@ -1,0 +1,14 @@
+{% extends "admin/admin_add_user.html" %}
+
+{% block mainContentTitle %}
+        <h2 align="center">添加学生</h2>
+    {% endblock %}
+
+{% block addInfoItem %}
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 control-label">所属班级</label>
+        <div class="col-sm-10">
+          <input name="class_" type="text" class="form-control" id="inputPassword" placeholder="所属班级">
+        </div>
+    </div>
+{% endblock %}

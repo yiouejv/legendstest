@@ -1,0 +1,33 @@
+{% extends "admin/admin_base.html" %}
+
+{% block addStyle %}
+    <style>
+        .form-container{
+            width: 400px;
+            padding-left: 40px;
+            padding-top: 30px;
+            font-size: 15px;
+        }
+        .btn-style{
+            text-align: right;
+        }
+    </style>
+{% endblock %}
+
+{% block mainTitle %}
+    查找用户
+{% endblock %}
+
+{% block mainContent %}
+<form action="" method="post">
+    <div class="form-container">
+        <div class="form-group">
+            <label for="exampleInputName2">邮箱</label>
+            <input name="email" type="text" class="form-control" id="exampleInputName2" placeholder="请输入邮箱">
+        </div>
+        <div class="btn-style">
+            <button type="button" class="btn btn-success">邮箱查找</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

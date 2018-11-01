@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.top{
+    height: 70px;
+    background: #4f8dfe;
+    /*background: #FFFFFF;*/
+}
+.top-title{
+    color: #fff;
+    float: right;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+.footer{
+    height: 100px;
+    background: #000;
+}
+.top .logo-div{
+    width: 150px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 15px;
+}

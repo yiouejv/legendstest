@@ -1,0 +1,131 @@
+{% extends "front/front_teacher_info.html" %}
+
+{% block addStyle %}
+    <script src="{{ static("front/js/update_choice.js") }}"></script>
+{% endblock %}
+
+{% block mainContent %}
+<div id="main" class="" style="float: right;width: 990px">
+    <div id="right-top" class="">
+        <h1 class="gl">选择题 题库管理</h1>
+        <div class="tianjia">
+            <a href="{{ url_for("front.add_choice") }}">添加新题</a>
+        </div>
+    </div>
+    <div id="right-bottom" class="">
+        <div id="r-b-center" class="">
+            <table cellpadding="0" cellspacing="0" width="990px">
+                <tr>
+                    <th id="bianhao">编号</th>
+                    <th id="timu" style="width: 80px;">所属语言</th>
+                    <th id="tigan">题干</th>
+                    <th id="daan" style="width: 50px;">答案</th>
+                    <th id="bianji">编辑</th>
+{#                    <th id="shancu">删除</th>#}
+                </tr>
+                {% for choice in choices %}
+                    <tr data-id = {{ choice.choice_id }}
+                        data-content="{{ choice.choice_content }}" data-choiceA="{{ choice.choice_option_A }}"
+                        data-choiceB="{{ choice.choice_option_B }}" data-choiceC="{{ choice.choice_option_C }}"
+                        data-choiceD="{{ choice.choice_option_D }}" data-choiceResult="{{ choice.choice_result }}"
+                        data-result = "{{ choice.choice_result }}"
+                    >
+                        <td id="bianhao">{{ choice.choice_id }}</td>
+                        <td id="type" style="width: 40px;">{{ choice.choice_type }}</td>
+                        <td id="timu">{{ choice.choice_content[0:40] }}...</td>
+                        <td id="daan" style="width: 30px;">{{ choice.choice_result }}</td>
+                        <td id="bianji">
+                            <button style="height: 35px;" class="btn btn-primary btn-lg updateBtn" data-toggle="modal" data-target="#myModal">
+                                修改/查看
+                            </button>
+                        </td>
+{#                        <td id="shancu"><input type="button" class="delBtn" value="删除" style="border:none"/></td>#}
+                    </tr>
+                {% endfor %}
+            </table>
+            {% block nextPage %}
+                <center>
+                    {% if page > 1 %}
+                        {% with page=page - 1 %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_choice', page=page) }}">上一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                    <span class="space-width"> </span>
+                    {% if total >= ChOICE_PAGE_SIZE %}
+                        {% with page=page + 1  %}
+                            <td> <button type="button" class="btn btn-info"><a href="{{ url_for('front.manager_choice', page=page) }}">下一页</a></button>
+                        {% endwith %}
+                    {% endif %}
+                </center>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					编辑题目
+				</h4>
+			</div>
+			<div class="modal-body" style="margin: 0 auto; font-size: 20px; width: 550px;">
+                <form class="form-horizontal" method="post">
+                    <div style="visibility:hidden"><input name="choiceId" type="text" value=""></div>
+                  <div class="form-group">
+                    <label name="name" for="inputName" class="col-sm-2 control-label">题目</label>
+                    <div class="col-sm-10">
+                      <input name="content" type="text" class="form-control" id="inputContent" placeholder="题目">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="choiceA" for="inputChoiceA" class="col-sm-2 control-label">选项A</label>
+                    <div class="col-sm-10">
+                      <input name="choiceA" type="text" class="form-control" id="inputChoiceA" placeholder="选项A">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="choiceB" for="inputChoiceB" class="col-sm-2 control-label">选项B</label>
+                    <div class="col-sm-10">
+                      <input name="choiceB" type="text" class="form-control" id="inputChoiceB" placeholder="选项B">
+                    </div>
+                  </div>
+                    <div class="form-group">
+                        <label name="choiceC" for="inputChoiceC" class="col-sm-2 control-label">选项C</label>
+                        <div class="col-sm-10">
+                          <input name="choiceC" type="text" class="form-control" id="inputChoiceC" placeholder="选项C">
+                        </div>
+                  </div>
+                    <div class="form-group">
+                    <label name="choiceD" for="inputChoiceD" class="col-sm-2 control-label">选项D</label>
+                    <div class="col-sm-10">
+                      <input name="choiceD" type="text" class="form-control" id="inputChoiceD" placeholder="选项D">
+                    </div>
+                  </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">正确答案</label>
+                        <div class="col-sm-9">
+                            <select name="choiceResult" id="choice_result">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="save-info-btn" type="button" class="btn btn-primary saveBtn">保存</button>
+            </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+{% endblock %}
+

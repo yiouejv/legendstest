@@ -1,0 +1,31 @@
+{% from 'common/_macro.html' import static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ static('front/css/mystyle.css') }}">
+    <link rel="stylesheet" href="{{ static('common/css/bootstrap.min.css') }}">
+    {% block title %}
+{#        页面标题#}
+    {% endblock %}
+    {% block head %}
+{#        页面添加css，js#}
+    {% endblock %}
+</head>
+<body>
+<div>
+    <div id="main_top">
+        <img src="{{ static('common/images/logo.png') }}" alt="这个一个logo" class="logo-div">
+        <div id="main_top_list">
+            <a href="{{ url_for("front.exam") }}">在线考试</a>
+            <a href="{{ url_for("front.studentCenter") }}">个人信息</a>
+            <a href="{{ url_for("front.login_out") }}">[注销]</a>
+        </div>
+    </div>
+    {% block mainContent %}
+{#        页面主题信息#}
+    {% endblock %}
+
+</div>
+</body>
+</html>

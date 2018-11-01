@@ -1,0 +1,86 @@
+{% extends "admin/admin_base.html" %}
+
+{% block addStyle %}
+    <style>
+        .form-container{
+            font-size: 14px;
+            padding-top: 30px;
+            width: 600px;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ static("admin/js/resetpwd.js") }}">
+    <link rel="stylesheet" href="{{ static("admin/css/sweetalert.css") }}">
+    <script src="{{ static("admin/js/xtalert.js") }}"></script>
+    <script src="{{ static("admin/js/sweetalert.min.js") }}"></script>
+{% endblock %}
+
+{% block mainTitle %}
+    {% if g.admin_user.admin_is_super %}
+        <a name="admin" class="btn btn-default" href="{{ url_for('admin.admin_add_user') }}" role="button">管理员</a>
+    {% endif %}
+    <a name="teacher" class="btn btn-default" href="{{ url_for('admin.admin_add_teacher') }}" role="button">老师</a>
+    <a name="student" class="btn btn-default" href="{{ url_for('admin.admin_add_student') }}" role="button">学生</a>
+{% endblock %}
+
+{% block mainContent %}
+    {% block mainContentTitle %}
+        <h2 align="center">添加管理员</h2>
+    {% endblock %}
+    <center>
+    <div class="form-container">
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+              <input name="name" type="text" class="form-control" id="inputPassword" placeholder="输入姓名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">手机号</label>
+            <div class="col-sm-10">
+              <input name="phone" type="text" class="form-control" id="inputPassword" placeholder="输入手机号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+              <input name="email" type="email" class="form-control" id="inputPassword" placeholder="输入邮箱">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+              <input name="password" type="password" class="form-control" id="inputPassword" placeholder="输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">确认密码</label>
+            <div class="col-sm-10">
+              <input name="password2" type="password" class="form-control" id="inputPassword" placeholder="确认密码">
+            </div>
+        </div>
+        {% block addInfoItem %}
+            <div class="checkbox">
+              <label>
+                <input name="is_super" type="checkbox" value="1"> <span style="font-size: 20px">超级管理员</span>
+              </label>
+            </div>
+        {% endblock %}
+        <div class="form-group">
+            <button id="submit" type="submit" class="btn btn-warning">立即添加</button>
+        </div>
+    </form>
+    </div>
+    </center>
+    {% if message=='恭喜您！用户添加成功' %}
+        <script>
+            xtalert.alertSuccess('{{ message }}')
+        </script>
+    {% elif message in ('请输入姓名', '输入的手机号码格式不正确', '请输入正确格式的邮箱', '请输入邮箱', '密码的长度要在6-20之间',
+    '请输入密码', '两次输入的密码不一致', '请重复密码', '手机号已经存在', '该邮箱已经存在'
+    ) %}
+        <script>
+            xtalert.alertError('{{ message }}')
+        </script>
+    {% endif %}
+{% endblock %}

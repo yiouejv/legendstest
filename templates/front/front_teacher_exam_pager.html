@@ -1,0 +1,393 @@
+{% from "common/_macro.html" import static %}
+{% set choices = score.socre_test_pager.test_pager_choices %}
+{% set short_answers = score.socre_test_pager.test_pager_short_answers %}
+{% set programs = score.socre_test_pager.test_pager_programs %}
+
+{% set short_answer_total_score = score.socre_test_pager.test_pager_short_answer_score |
+short_answerTotalScore(num=score.socre_test_pager.test_pager_short_answer_num) %}
+
+{% set choice_total_score = score.socre_test_pager.test_pager_choice_score |
+choiceTotalScore(num=score.socre_test_pager.test_pager_choice_num) %}
+
+{% set program_total_score = score.socre_test_pager.test_pager_program_score |
+programTotalScore(num=score.socre_test_pager.test_pager_program_num) %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>在线答题考试系统</title>
+
+    <script src="{{ static("common/js/jquery.min.js.js") }}"></script>
+    <script src="{{ static("front/js/teacher_exam_pager.js") }}"></script>
+    <link rel="stylesheet" href="{{ static("admin/css/sweetalert.css") }}">
+    <script src="{{ static("admin/js/xtalert.js") }}"></script>
+    <script src="{{ static("admin/js/sweetalert.min.js") }}"></script>
+
+
+	<!--简答题文本域外部文件-->
+
+	<script type="text/javascript" src="{{ static("front/js/tiny_mce.js") }}"></script>
+	<script type="text/javascript" src="{{ static("front/js/editor_template.js") }}"></script>
+	<script type="text/javascript" src="{{ static("front/js/en.js") }}"></script>
+	<script type="text/javascript" src="{{ static("front/js/langs/en.js") }}"></script>
+	<link href="{{ static("front/css/ui.css") }}" rel="stylesheet" type="text/css" />
+	<link href="{{ static("front/css/translateelement.css") }}" rel="stylesheet" type="text/css" />
+
+	<!--考试模板链接外部文件-->
+	<link href="{{ static("front/css/main.css") }}" rel="stylesheet" type="text/css" />
+	<link href="{{ static("front/css/iconfont.css") }}" rel="stylesheet" type="text/css" />
+	<link href="{{ static("front/css/test.css") }}" rel="stylesheet" type="text/css" />
+
+	<!--简答题文本域初始化-->
+	<script type="text/javascript">
+        var length = {{ short_answers | length }}
+        for (i=1; i< length+1; i++){
+                tinyMCE.init({
+                mode : "exact",
+                elements:"elm"+i.toString(),
+    		});
+        }
+	</script>
+
+	<!--程序题编辑框外部链接文件-->
+	<link rel="stylesheet" href="{{ static("front/css/codemirror.css") }}">
+	<script src="{{ static("front/js/codemirror.js") }}"></script>
+	<script src="{{ static("front/js/python.js") }}"></script>
+	<style type="text/css">
+	    .CodeMirror {border-top: 2px solid black; border-bottom: 2px solid black;border-left: 2px solid black;border-right:2px solid black;}
+	</style>
+
+	<!--考试模板-->
+	<style>
+	.hasBeenAnswer {
+		background: #5d9cec;
+		color:#fff;
+	}
+	</style>
+
+</head>
+
+<body>
+<div class="main">
+	<!--nr start-->
+	<div class="test_main">
+		<div class="nr_left">
+			<div class="test">
+				<form action="" method="post">
+					<div class="test_title">
+						<p class="test_time">
+							<i class="icon iconfont">&#xe6fb;</i><b class="alt-1">02:00</b>
+						</p>
+						<font><input type="button" name="endBtn" value="阅卷结束"></font>
+					</div>
+
+						<!--单选题-->
+						<div class="test_content">
+							<div class="test_content_title">
+								<h2>单选题</h2>
+								<p>
+									<span>共</span><i class="content_lit">{{ score.socre_test_pager.test_pager_choice_num }}</i><span>题,
+                                    </span><span>合计</span><i class="content_fs">{{ choice_total_score }}</i><span>分</span>
+								</p>
+							</div>
+						</div>
+						<div class="test_content_nr">
+							<ul choicetotal="{{ choices | length }}" id="choiceUl">
+
+                                {% for choice in choices %}
+									<li id="{{ choice.choice_id }}">
+										<div class="test_content_nr_tt">
+											<i>{{ loop.index }}</i><span>({{ score.socre_test_pager.test_pager_choice_score }}分)</span><font>{{ choice.choice_content }}</font><b class="icon iconfont">&#xe881;</b>
+										</div>
+										<div class="test_content_nr_main">
+											<ul>
+												<li class="option">
+													<input type="radio" class="radioOrCheck"
+																pager-id="{{ choice.choice_id }}A" value="A"
+														/>
+
+														<label for="{{ choice.choice_id }}A">
+															A.
+															<p class="ue" style="display: inline;">{{ choice.choice_option_A }}</p>
+														</label>
+												</li>
+
+												<li class="option">
+													<input type="radio" class="radioOrCheck"
+																id="{{ choice.choice_id }}B" value="B"
+															/>
+														<label for="{{ choice.choice_id }}B">
+															B.
+															<p class="ue" style="display: inline;">{{ choice.choice_option_B }}</p>
+														</label>
+												</li>
+
+												<li class="option">
+													<input type="radio" class="radioOrCheck"
+																id="{{ choice.choice_id }}C" value="C"
+															/>
+														<label for="{{ choice.choice_id }}C">
+															C.
+															<p class="ue" style="display: inline;">{{ choice.choice_option_C }}</p>
+														</label>
+												</li>
+
+												<li class="option">
+													<input type="radio" class="radioOrCheck"
+																id="{{ choice.choice_id }}D" value="D"
+															/>
+														<label for="{{ choice.choice_id }}D">
+															D.
+															<p class="ue" style="display: inline;">{{ choice.choice_option_D }}</p>
+														</label>
+												</li>
+											</ul>
+											<ul>
+												<p class="option" style="font-size:16px ;">
+                                                    学生选择:{{ choice_results[loop.index0].student_choice_result_student_choice_result }}
+                                                </p>
+												<p class="option" style="font-size:16px ;">
+                                                    标准答案:{{ choice_results[loop.index0].student_choice_result_choice_result }}
+                                                </p>
+{#                                                判断学生的选项和答案是否一致, 一致得满分，不一致得0分#}
+                                                {% if choice_results[loop.index0].student_choice_result_student_choice_result ==
+                                                        choice_results[loop.index0].student_choice_result_choice_result %}
+                                                    <p class="option" style="font-size:16px ;">
+                                                        学生得分: <input type="text" name="choice{{ choice.choice_id }}" value="{{ score.socre_test_pager.test_pager_choice_score }}" readonly="readonly">
+                                                    </p>
+                                                {% else %}
+                                                    <p class="option" style="font-size:16px ;">
+                                                        学生得分: <input type="text" name="choice{{ choice.choice_id }}" value="0" readonly="readonly">
+                                                    </p>
+                                                {% endif %}
+
+											<ul>
+										</div>
+									</li>
+
+                                {% endfor %}
+							</ul>
+						</div>
+
+
+						<!--简答题-->
+						<div class="test_content">
+							<div class="test_content_title">
+								<h2>简答题</h2>
+								<p>
+									<span>共</span><i class="content_lit">{{ short_answers | length }}</i><span>题，</span><span>合计</span><i class="content_fs">
+                                    {{ short_answer_total_score }}
+                                </i><span>分</span>
+								</p>
+							</div>
+						</div>
+						<div class="test_content_nr">
+							<ul>
+                                {% for short_answer in short_answers %}
+                                    <li id="short_answer{{ loop.index }}">
+										<div class="test_content_nr_tt">
+											<i>{{ loop.index }}</i><span>({{ score.socre_test_pager.test_pager_short_answer_score }}分)</span>
+                                            <font>{{ short_answer.short_answer_content }}</font><b class="icon iconfont">&#xe881;</b>
+										</div>
+
+										<div class="test_content_nr_main">
+											<ul>
+												<textarea id="elm{{ loop.index }}" name="elm{{ loop.index }}" rows="15" cols="80" style="width: 100%">
+                                                    {{ short_answer_results[loop.index0].student_short_answer_student_short_answer_result }}
+												</textarea>
+												
+												<div style="font-size: 16px;margin-top: 10px;">
+													<p>给分:</p>
+                                                        {% for _ in range(1, score.socre_test_pager.test_pager_short_answer_score | addOne ) %}
+                                                            <input type="radio" name="short_answer{{ short_answer.short_answer_id }}"
+                                                                   value="{{ loop.index }}"
+                                                                   id="score_1">{{ loop.index }}分
+                                                        {% endfor %}
+													<br/>
+													<p>标准答案:
+                                                        {{ short_answer.short_answer_result }}
+                                                    </p>
+												<div>
+											</ul>
+										</div>
+
+								    </li>
+                                {% endfor %}
+							</ul>
+						</div>
+
+						<!--程序题-->
+						<div class="test_content">
+							<div class="test_content_title">
+								<h2>程序题</h2>
+								<p>
+									<span>共</span><i class="content_lit">{{ programs | length }}</i><span>题，</span><span>合计</span><i class="content_fs">{{ program_total_score }}</i><span>分</span>
+								</p>
+							</div>
+						</div>
+						<div class="test_content_nr">
+							<ul>
+                                {% for program in programs %}
+                                    <li id="program{{ loop.index }}">
+                                            <div class="test_content_nr_tt">
+                                                <i>{{ loop.index }}</i><span>({{ score.socre_test_pager.test_pager_program_score }}分)</span>
+                                                <font>{{ program.program_content }}</font><b class="icon iconfont">&#xe881;</b>
+                                            </div>
+                                            <div class="test_content_nr_main">
+                                                <ul>
+                                                    <textarea id="code{{ loop.index }}" name="code">{{ program_results[loop.index0].student_program_student_result }}</textarea>
+                                                    <div style="font-size: 16px;margin-top: 10px;">
+													<p>给分:</p>
+                                                        {% for _ in range(1, score.socre_test_pager.test_pager_program_score | addOne ) %}
+{#                                                            构造程序题提交表单信息：program程序题ID程序题得分#}
+                                                            <input type="radio" name="program{{ program.program_id }}"
+                                                                   value="{{ loop.index }}"
+                                                                   id="score_1">{{ loop.index }}分
+                                                        {% endfor %}
+													<br/>
+													<p>标准答案:
+                                                        {{ program.program_result }}
+                                                    </p>
+												<div>
+                                                </ul>
+                                            </div>
+                                    </li>
+                                {% endfor %}
+							</ul>
+						</div>
+
+					<!--程序题编辑框初始化-->
+					<script>
+                        for (i=1; i<={{ programs | length }}; i++){
+                            var editor = CodeMirror.fromTextArea(document.getElementById("code"+i.toString()), {
+					        mode: {name: "python",
+					               version: 2,
+					               singleLineStringErrors: false},
+										lineNumbers: true,
+										indentUnit: 4,
+										tabMode: "shift",
+										matchBrackets: true
+					      });
+                        }
+    				</script>
+				</form>
+			</div>
+		</div>
+
+		<!--答题卡部分-->
+		<div class="nr_right">
+			<div class="nr_rt_main">
+				<div class="rt_nr1">
+					<div class="rt_nr1_title">
+						<h1>
+							<i class="icon iconfont">&#xe692;</i>答题卡
+						</h1>
+						<p class="test_time">
+							<i class="icon iconfont">&#xe6fb;</i><b class="alt-1">02:00</b>
+						</p>
+					</div>
+
+					<div class="rt_content">
+						<div class="rt_content_tt">
+							<h2>单选题</h2>
+							<p>
+								<span>共</span><i class="content_fs">{{ choice_total_score }}</i><span>分</span>
+							</p>
+						</div>
+						<div class="rt_content_nr answerSheet">
+							<ul>
+                                {% for choice in choices %}
+                                    <li><a href="#{{ choice.choice_id }}">{{ loop.index }}</a></li>
+                                {% endfor %}
+							</ul>
+						</div>
+					</div>
+
+					<div class="rt_content">
+						<div class="rt_content_tt">
+							<h2>简答题</h2>
+							<p>
+								<span>共</span><i class="content_fs">{{ short_answer_total_score }}</i><span>分</span>
+							</p>
+						</div>
+						<div class="rt_content_nr answerSheet">
+							<ul>
+								{% for short_answer in short_answers %}
+								    <li><a href="#short_answer{{ loop.index }}">{{ loop.index }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+
+					<div class="rt_content">
+						<div class="rt_content_tt">
+							<h2>程序题</h2>
+							<p>
+								<span>共</span><i class="content_fs"></i><span>{{ program_total_score }}分</span>
+							</p>
+						</div>
+						<div class="rt_content_nr answerSheet">
+							<ul>
+                                {% for program in programs %}
+                                    <li><a href="#program{{ loop.index }}">{{ loop.index }}</a></li>
+                                {% endfor %}
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--nr end-->
+	<div class="foot"></div>
+</div>
+
+
+
+
+<script src="{{ static("front/js/jquery-1.11.3.min.js") }}"></script>
+<script src="{{ static("front/js/jquery.easy-pie-chart.js") }}"></script>
+<!--时间js-->
+<script src="{{ static("front/js/jquery.countdown.js") }}"></script>
+
+<script>
+
+
+	window.jQuery(function($) {
+		"use strict";
+
+		$('time').countDown({
+			with_separators : false
+		});
+		$('.alt-1').countDown({
+			css_class : 'countdown-alt-1'
+		});
+		$('.alt-2').countDown({
+			css_class : 'countdown-alt-2'
+		});
+
+	});
+
+
+	$(function() {
+		$('li.option label').click(function() {
+		debugger;
+			var examId = $(this).closest('.test_content_nr_main').closest('li').attr('id'); // 得到题目ID
+			var cardLi = $('a[href=#' + examId + ']'); // 根据题目ID找到对应答题卡
+			// 设置已答题
+			if(!cardLi.hasClass('hasBeenAnswer')){
+				cardLi.addClass('hasBeenAnswer');
+			}
+
+		});
+	});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>传奇小组提供技术支持</p>
+</div>
+</body>
+</html>
