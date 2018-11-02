@@ -33,7 +33,7 @@ $(function () {
             return;
         }
 
-        url = '/update_teacher/';
+        url = '/admin/update_teacher/';
 
         $.post(
             url,{
@@ -46,7 +46,7 @@ $(function () {
             function (data, status) {
                 if (data == 'success') {
                     xtalert.alertSuccessToast('信息修改成功');
-                    window.location.href='/admin_manager_teacher/1/';
+                    window.location.href='/admin/admin_manager_teacher/1/';
                     $("#updatedialog").modal("hide");
                 }
                 else{
@@ -98,7 +98,7 @@ $(function () {
             'cancelText': '取消',
             'msg': '确定删除此用户吗？',
             'confirmCallback': function () {
-                url = '/delete_teacher/';
+                url = '/admin/delete_teacher/';
                 var tr = self.parent().parent();
                 var id = tr.attr("data-id");
                 console.log(id)
@@ -109,7 +109,7 @@ $(function () {
                     function (data, status) {
                         if (data == 'success') {
                             xtalert.alertSuccessToast('信息已删除!');
-                            window.location.href='/admin_manager_teacher/1/';
+                            window.location.href='/admin/admin_manager_teacher/1/';
                         }
                         else{
                             xtalert.alertErrorToast(data)

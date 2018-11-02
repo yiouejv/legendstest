@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49b6ba8-1c3d-472c-a4c0-20ac0d064cde" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/update_admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/update_student.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/update_teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_teacher.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,47 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="front_teacher_info.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/front/front_teacher_info.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/front/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8822">
-              <caret line="401" column="27" selection-start-line="401" selection-start-column="27" selection-end-line="401" selection-end-column="27" />
-              <folding>
-                <element signature="e#18#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hooks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/front/hooks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -83,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="11" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -94,40 +58,68 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2090">
-              <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+            <state relative-caret-position="88">
+              <caret line="351" column="15" lean-forward="true" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
               <folding>
-                <element signature="e#18#133#0" expanded="true" />
+                <element signature="e#16#131#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sweetalert.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/sweetalert.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="resetpwd.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/resetpwd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/update_admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2244">
+              <caret line="102" column="37" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_student.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/update_student.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1176">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_teacher.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/update_teacher.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xtalert.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/admin/js/xtalert.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-924" />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="blueprints.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python37/Lib/site-packages/flask/blueprints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="2552">
               <caret line="119" column="27" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="front_manager_score.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/front/front_manager_score.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -185,9 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/admin/js/update_teacher.js" />
-        <option value="$PROJECT_DIR$/static/front/css/codemirror.css" />
-        <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/templates/front/front_base.html" />
         <option value="$PROJECT_DIR$/static/front/js/teacher_commit.js" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -236,6 +225,9 @@
         <option value="$PROJECT_DIR$/apps/admin/views.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/manager.py" />
+        <option value="$PROJECT_DIR$/static/admin/js/update_admin.js" />
+        <option value="$PROJECT_DIR$/static/admin/js/update_student.js" />
+        <option value="$PROJECT_DIR$/static/admin/js/update_teacher.js" />
       </list>
     </option>
   </component>
@@ -260,57 +252,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="legends_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="legends_test" type="462c0819:PsiDirectoryNode" />
-              <item name="测试数据" type="462c0819:PsiDirectoryNode" />
+              <item name="legendstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legendstest" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,158 +348,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加程序设计题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加简答题" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加简答题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加简答题" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加简答题.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="legends_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -713,6 +543,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="legends_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -884,6 +733,139 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加选择题" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加选择题.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加简答题" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加简答题.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加简答题" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加简答题.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="添加老师" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="legends_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/测试数据" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试数据/添加老师.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="manager" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="legends_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -988,49 +970,63 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25785482" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25785482" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.25135428" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.24307036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.18390192" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5015244" side_tool="true" weight="0.1484375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47559056" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47559056" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.24307036" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25785482" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="3" side_tool="true" visible="true" weight="0.3296875" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015244" side_tool="true" weight="0.1484375" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3273495" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.25135428" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.32943678" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15520833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29250264" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3273495" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994528" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" side_tool="true" visible="true" weight="0.3296875" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3273495" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32946146" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1057,48 +1053,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/admin/admin_add_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/admin_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/front_teacher_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/common_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/admin/css/admin_login_min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/front_add_program.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/front_add_choice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -1347,42 +1301,30 @@
     <entry file="file://$PROJECT_DIR$/templates/front/front_teacher_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8822">
+        <state relative-caret-position="8602">
           <caret line="401" column="27" selection-start-line="401" selection-start-column="27" selection-end-line="401" selection-end-column="27" />
-          <folding>
-            <element signature="e#18#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/hooks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="286">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python37/Lib/site-packages/flask/blueprints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
+        <state relative-caret-position="2552">
           <caret line="119" column="27" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="27" />
         </state>
       </provider>
@@ -1396,10 +1338,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2090">
-          <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        <state relative-caret-position="88">
+          <caret line="351" column="15" lean-forward="true" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
           <folding>
-            <element signature="e#18#133#0" expanded="true" />
+            <element signature="e#16#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1407,7 +1349,7 @@
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="11" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -1416,11 +1358,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/resetpwd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/xtalert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/sweetalert.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/update_admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="102" column="37" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/update_student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1176">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/update_teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
         </state>
       </provider>
     </entry>
