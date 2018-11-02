@@ -1,3 +1,4 @@
+# coding=utf-8
 from config import session as db_session
 from functools import wraps
 from .views import front_bp

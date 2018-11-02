@@ -1,3 +1,4 @@
+# coding=utf-8
 from flask import render_template, views, session, redirect, url_for
 from functools import wraps
 import config

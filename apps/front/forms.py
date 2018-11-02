@@ -1,3 +1,4 @@
+# coding=utf-8
 from wtforms import Form, StringField
 from wtforms.validators import Email, Length, InputRequired, DataRequired
 

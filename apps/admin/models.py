@@ -1,4 +1,4 @@
-# encoding: utf-8
+# coding=utf-8
 from sqlalchemy import Column, String, Boolean, DateTime, Integer
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime

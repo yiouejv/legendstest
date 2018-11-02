@@ -1,3 +1,4 @@
+# coding=utf-8
 from flask import Flask
 from apps.front.views import front_bp
 from apps.admin.views import admin_bp

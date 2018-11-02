@@ -1,3 +1,4 @@
+# coding=utf-8
 from config import session as db_session
 from apps.front.models import Student, Class, TestPager, Score
 

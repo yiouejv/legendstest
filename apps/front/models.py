@@ -1,3 +1,4 @@
+# coding=utf-8
 from config import Base, session as db_session
 from sqlalchemy import Column, String, Boolean, ForeignKey, Integer,\
     Table, DateTime, Text

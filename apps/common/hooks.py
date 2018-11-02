@@ -1,3 +1,4 @@
+# coding=utf-8
 from apps.common.views import common_bp
 from flask import render_template
 
