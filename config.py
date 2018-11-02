@@ -20,7 +20,7 @@ Base = declarative_base(engine)
 session = sessionmaker(engine)()
 
 # 设置访问域名
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['legends.syzyb.com']
 
 #设置session过期时间
 PARMANENT_SESSION_LIFETIME = 15
