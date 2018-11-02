@@ -11,7 +11,7 @@ from apps.front.models import Student, Teacher, Class
 import config
 from uuid import uuid4
 
-admin_bp = Blueprint('admin', __name__, subdomain='admin')
+admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
 
 @admin_bp.route('/')

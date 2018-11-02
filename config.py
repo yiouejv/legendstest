@@ -9,7 +9,7 @@ HOST = '127.0.0.1'
 PORT = 3306
 DATABASE = 'legends'
 USERNAME = 'root'
-PASSWORD = 'root'
+PASSWORD = 'q1w2e3r4.'
 
 DB_URL = "mysql+pymysql://{username}:{password}@{host}:{port}/{db}".format(
     username=USERNAME, password=PASSWORD, host=HOST, port=PORT, db=DATABASE
@@ -21,7 +21,8 @@ session = sessionmaker(engine)()
 
 #设置session过期时间
 PARMANENT_SESSION_LIFETIME = 15
-SERVER_NAME = 'legendstest.com:5000'
+# SERVER_NAME = 'legendstest.com:5000'
+ALLOWED_HOSTS = ['127.18.192.65']
 
 ADMIN_UUID = 'DSADAFAS'
 STUDENT_EMAIL = "DSADSAHHE"
