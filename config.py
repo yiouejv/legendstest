@@ -20,8 +20,7 @@ Base = declarative_base(engine)
 session = sessionmaker(engine)()
 
 # 设置访问域名
-ALLOWED_HOSTS = ['172.18.192.65']
-PORT = 5000
+ALLOWED_HOSTS = ['172.18.192.65', '47.107.96.95']
 
 #设置session过期时间
 PARMANENT_SESSION_LIFETIME = 15
