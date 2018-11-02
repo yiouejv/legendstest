@@ -19,6 +19,9 @@ engine = create_engine(DB_URL)
 Base = declarative_base(engine)
 session = sessionmaker(engine)()
 
+# 设置访问域名
+ALLOWED_HOSTS = ['172.18.192.65']
+
 #设置session过期时间
 PARMANENT_SESSION_LIFETIME = 15
 # SERVER_NAME = 'legendstest.com:5000'
