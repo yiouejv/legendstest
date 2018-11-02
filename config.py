@@ -21,6 +21,7 @@ session = sessionmaker(engine)()
 
 # 设置访问域名
 ALLOWED_HOSTS = ['172.18.192.65']
+PORT = 5000
 
 #设置session过期时间
 PARMANENT_SESSION_LIFETIME = 15
