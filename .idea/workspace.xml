@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49b6ba8-1c3d-472c-a4c0-20ac0d064cde" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/js/update_admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/update_student.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/update_teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/update_teacher.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +58,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="351" column="15" lean-forward="true" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
+            <state relative-caret-position="314">
+              <caret line="324" column="31" lean-forward="true" selection-start-line="324" selection-start-column="31" selection-end-line="324" selection-end-column="31" />
               <folding>
                 <element signature="e#16#131#0" expanded="true" />
               </folding>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_admin.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="update_admin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/admin/js/update_admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2244">
-              <caret line="102" column="37" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+            <state relative-caret-position="166">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -99,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_teacher.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_teacher.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/admin/js/update_teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="2266">
               <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
             </state>
           </provider>
@@ -222,12 +222,12 @@
         <option value="$PROJECT_DIR$/static/front/css/front_teacher_base.css" />
         <option value="$PROJECT_DIR$/templates/front/front_teacher_base.html" />
         <option value="$PROJECT_DIR$/templates/front/front_teacher_info.html" />
-        <option value="$PROJECT_DIR$/apps/admin/views.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/manager.py" />
-        <option value="$PROJECT_DIR$/static/admin/js/update_admin.js" />
         <option value="$PROJECT_DIR$/static/admin/js/update_student.js" />
         <option value="$PROJECT_DIR$/static/admin/js/update_teacher.js" />
+        <option value="$PROJECT_DIR$/apps/admin/views.py" />
+        <option value="$PROJECT_DIR$/static/admin/js/update_admin.js" />
       </list>
     </option>
   </component>
@@ -1336,16 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/admin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="351" column="15" lean-forward="true" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
-          <folding>
-            <element signature="e#16#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1378,13 +1368,6 @@
     <entry file="file://$PROJECT_DIR$/static/admin/js/sweetalert.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/admin/js/update_admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="102" column="37" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/js/update_student.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1176">
@@ -1394,8 +1377,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/js/update_teacher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="2266">
           <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="324" column="31" lean-forward="true" selection-start-line="324" selection-start-column="31" selection-end-line="324" selection-end-column="31" />
+          <folding>
+            <element signature="e#16#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/js/update_admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -35,7 +35,7 @@ $(function () {
             return;
         }
 
-        url = '/update_user/';
+        url = '/admin/update_user/';
 
         $.post(
             url,{

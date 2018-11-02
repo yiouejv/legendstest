@@ -314,7 +314,7 @@ def update_teahcer():
         return error
 
 
-@admin_bp.route('/update_student/', methods=['POST'])
+@admin_bp.route('/admin/update_student/', methods=['POST'])
 @login_required
 def update_student():
     form = UpdateStudentForm(request.form)
